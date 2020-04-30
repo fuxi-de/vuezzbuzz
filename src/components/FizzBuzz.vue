@@ -2,9 +2,9 @@
   <div class="fizzbuzz">
     <p>Gib eine Zahl ein und versuch dein Glück :)</p>
     <h1 v-if="error.length">{{error}}</h1>
-    <input v-model="input" type="number" />
+    <input class="input" v-model="input" type="number" />
     <button v-on:click="validate">submit</button>
-    {{ output }}
+    <span class="output">{{ output }}</span>
   </div>
 </template>
 
