@@ -1,5 +1,5 @@
 <template>
-  <div class="fizzbuzz">
+  <div class="fizzbuzz flex">
     <p>Gib eine Zahl ein und versuch dein Glück :)</p>
     <h1 v-if="error.length">{{error}}</h1>
     <input class="input" v-model="input" type="number" />
