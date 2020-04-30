@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
     <fizz-buzz></fizz-buzz>
   </div>
 </template>
