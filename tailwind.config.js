@@ -1,8 +1,12 @@
 module.exports = {
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'immowelt-yellow': '#fc0'
+      }
+    }
   },
   variants: {},
-  plugins: [],
+  plugins: []
 }
