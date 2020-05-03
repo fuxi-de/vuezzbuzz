@@ -39,6 +39,8 @@
 
 <script>
 import SuccessMessage from './SuccessMessage'
+import axios from 'axios'
+
 export default {
   name: 'FizzBuzz',
   components: {
@@ -49,6 +51,7 @@ export default {
       input: '',
       output: '',
       error: '',
+      errors: [],
       test: true
     }
   },
@@ -63,15 +66,13 @@ export default {
       this.fizzBuzz()
     },
     fizzBuzz () {
-      const i = this.input
-      this.output =
-        i % 3 === 0 && i % 5 === 0
-          ? 'fizzbuzz'
-          : i % 5 === 0
-            ? 'buzz'
-            : i % 3 === 0
-              ? 'fizz'
-              : i
+      axios.get('https://vuezzbuzz-git-develop.fuxi-de.now.sh/api/fizzBuzz')
+        .then(response => {
+          console.log(response)
+        })
+        .catch(e => {
+          this.errors.push(e)
+        })
     },
     reset () {
       this.input = 0
