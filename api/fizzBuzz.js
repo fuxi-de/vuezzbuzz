@@ -8,7 +8,7 @@ module.exports = (req, res) => {
   //       : i % 3 === 0
   //         ? 'fizz'
   //         : i
-  res.header('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Origin', '*')
   res.json({
     body: req.body,
     query: req.query
