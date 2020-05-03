@@ -65,18 +65,17 @@ export default {
       }
       this.fizzBuzz()
     },
-    fizzBuzz () {
-      axios.get('https://vuezzbuzz-git-feat-srvless.fuxi-de.now.sh/api/fizzBuzz', {
-        params: {
-          input: this.input
-        }
-      })
-        .then(response => {
-          console.log(response)
+    async fizzBuzz () {
+      try {
+        const response = await axios.get('https://vuezzbuzz-mt722836z.now.sh/api/fizzBuzz', {
+          params: {
+            input: this.input
+          }
         })
-        .catch(e => {
-          this.errors.push(e)
-        })
+        this.output = response.data.output
+      } catch (e) {
+        this.errors.push(e)
+      }
     },
     reset () {
       this.input = 0
