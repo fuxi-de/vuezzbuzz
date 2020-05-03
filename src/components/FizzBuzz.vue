@@ -66,7 +66,11 @@ export default {
       this.fizzBuzz()
     },
     fizzBuzz () {
-      axios.get('https://vuezzbuzz-git-develop.fuxi-de.now.sh/api/fizzBuzz')
+      axios.get('https://vuezzbuzz-git-feat-srvless.fuxi-de.now.sh/api/fizzBuzz', {
+        params: {
+          input: this.input
+        }
+      })
         .then(response => {
           console.log(response)
         })
