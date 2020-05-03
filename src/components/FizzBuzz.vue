@@ -10,6 +10,7 @@
           type="number"
           placeholder="Gib eine Zahl ein"
           v-model="input"
+          data-test="input"
           @keyup.enter="validate"
         />
         <button
@@ -28,7 +29,7 @@
           Cancel
         </button>
       </div>
-      <p v-if="error.length" class="text-red-500 text-xs italic mt-4 text-left">
+      <p v-if="error.length" class="text-red-500 text-xs italic mt-4 text-left" data-test="error">
         Bitte wähle eine positive Zahl
       </p>
     </form>
@@ -61,10 +62,6 @@ export default {
       }
       this.fizzBuzz()
     },
-    reset () {
-      this.input = 0
-      this.error = ''
-    },
     fizzBuzz () {
       const i = this.input
       this.output =
@@ -75,6 +72,10 @@ export default {
             : i % 3 === 0
               ? 'fizz'
               : i
+    },
+    reset () {
+      this.input = 0
+      this.error = ''
     }
   }
 }
