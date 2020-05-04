@@ -9,7 +9,7 @@
           class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
           type="number"
           placeholder="Gib eine Zahl ein"
-          v-model="input"
+          v-model.number="input"
           data-test="input"
           @keyup.enter="validate"
         />
@@ -71,10 +71,10 @@ export default {
             ? 'buzz'
             : i % 3 === 0
               ? 'fizz'
-              : i
+              : i.toString()
     },
     reset () {
-      this.input = 0
+      this.input = ''
       this.error = ''
     }
   }
