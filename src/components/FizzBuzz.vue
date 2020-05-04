@@ -29,8 +29,12 @@
           Cancel
         </button>
       </div>
-      <p v-if="error.length" class="text-red-500 text-xs italic mt-4 text-left" data-test="error">
-        Bitte wähle eine positive Zahl
+      <p
+        v-if="error.length"
+        class="text-red-500 text-xs italic mt-4 text-left"
+        data-test="error"
+      >
+        {{ error }}
       </p>
     </form>
     <success-message v-if="output.length" :message="output" />
