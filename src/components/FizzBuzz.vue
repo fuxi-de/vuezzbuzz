@@ -29,8 +29,12 @@
           Cancel
         </button>
       </div>
-      <p v-if="error.length" class="text-red-500 text-xs italic mt-4 text-left" data-test="error">
-        Bitte wähle eine positive Zahl
+      <p
+        v-if="error.length"
+        class="text-red-500 text-xs italic mt-4 text-left"
+        data-test="error"
+      >
+        {{ error }}
       </p>
     </form>
     <success-message v-if="output.length" :message="output" />
@@ -67,11 +71,14 @@ export default {
     },
     async fizzBuzz () {
       try {
-        const response = await axios.get('https://vuezzbuzz-mt722836z.now.sh/api/fizzBuzz', {
-          params: {
-            input: this.input
+        const response = await axios.get(
+          'https://vuezzbuzz-mt722836z.now.sh/api/fizzBuzz',
+          {
+            params: {
+              input: this.input
+            }
           }
-        })
+        )
         this.output = response.data.output
       } catch (e) {
         this.errors.push(e)
