@@ -6,7 +6,7 @@
     <div class="flex">
       <div>
         <p class="font-bold">Fizzle da buzz:</p>
-        <p class="text-sm">
+        <p class="text-sm" data-test="success">
           {{ message }}
         </p>
       </div>

@@ -3,7 +3,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'immowelt-yellow': '#fc0'
+        immowelt: {
+          400: '#ffd942',
+          500: '#fc0'
+        }
       }
     }
   },
