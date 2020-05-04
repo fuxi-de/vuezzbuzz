@@ -22,7 +22,7 @@ will serve the application in development mode with hot reloading under [localho
 
 ### Whats included
 
-The application currently consists of 2 components. One (_/src/components/FizzBuzz.vue_) responsible for providing an input form and handling the user input and another one (_/src/components/SuccessMessage.vue_) responsible for displaying a SuccessMessage if the input could be processed correctly.
+The application currently consists of 3 components. One (_/src/components/FizzBuzz.vue_) responsible for providing an input form and handling the user input and another one (_/src/components/SuccessMessage.vue_) responsible for displaying a SuccessMessage if the input could be processed correctly. Also Buttons are implemented as a component (_/src/components/Button.vue_) as they share base styles, markup and functionality and deviating usecases can be handled via props the Button component accepts.
 
 #### Tests
 
