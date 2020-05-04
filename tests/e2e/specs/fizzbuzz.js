@@ -1,8 +1,8 @@
 describe('FizzBuzz Test', () => {
-  it('Visits the app root url', () => {
+  it('Visits the app root url and tests the input', () => {
     cy.visit('/')
-    cy.get('[type=number]').should('have.attr', 'placeholder', 'Gib eine Zahl ein')
-    cy.get('[type=number]')
+    cy.get('[data-test=input]').should('have.attr', 'placeholder', 'Gib eine Zahl ein')
+    cy.get('[data-test=input]')
       .clear()
       .type(3)
     cy.get('[data-test=submit]').click()

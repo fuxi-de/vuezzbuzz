@@ -7,22 +7,22 @@ The [master](https://github.com/fuxi-de/vuezzbuzz/tree/master) branch is automat
 
 The [develop](https://github.com/fuxi-de/vuezzbuzz/tree/develop) branch represents the current development progress and is automatically deployed to [vuezzbuzz-git-develop.fuxi-de.now.sh](https://vuezzbuzz-git-develop.fuxi-de.now.sh/).
 
-The [feat/srvless]() branch is a feature branch where the fizzBuzz logic is implemented as a serverless function. This is abandoned as a WIP because it is neither an practical nor performant approach for our usecase compared to implementing the function in vue itself and I mainly implemented it because I wanted to play around with the serverless feature of vercel in the first place.
+The [feat/srvless](https://github.com/fuxi-de/vuezzbuzz/tree/feat/srvless) branch is a feature branch where the fizzBuzz logic is implemented as a serverless function. This is abandoned as a WIP because it is neither an practical nor performant approach for our usecase compared to implementing the function in vue itself and I mainly implemented it because I wanted to play around with the serverless feature of vercel in the first place.
 
 ### Get going
-Running
+Running:
 ```
 npm install
 ```
-will install all needed dependencies and running
+will install all needed dependencies and running:
 ```
 npm run serve
 ```
-will serve the application in development mode with hot reloading under [localhost:8080](https://localhost:8080)
+will serve the application in development mode with hot reloading under [localhost:8080](http://localhost:8080/)
 
 ### Whats included
 
-The application currently consists of 2 components. One (_/src/components/FizzBuzz.vue_) responsible for providing an input form and handling the user input and another one (_/src/components/SuccessMessage.vue_) responsible for displaying a SuccessMessage if the Input could be processed correctly.
+The application currently consists of 2 components. One (_/src/components/FizzBuzz.vue_) responsible for providing an input form and handling the user input and another one (_/src/components/SuccessMessage.vue_) responsible for displaying a SuccessMessage if the input could be processed correctly.
 
 #### Tests
 
@@ -30,9 +30,9 @@ unit tests can be run via
 ```
 npm run test:unit
 ```
-the suites are implemented using [mochaJS](https://mochajs.org/) and are located under _/src/tests/unit_
+the suites are implemented using [mochaJS](https://mochajs.org/) and are located under _/tests/unit_
 
-integration tests can be run via
+integration tests are located under _/tests/e2e_ can be run via
 ```
 npm run test:e2e
 ```
