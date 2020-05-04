@@ -1,8 +1,8 @@
 import { expect } from 'chai'
-import { shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import FizzBuzz from '@/components/FizzBuzz.vue'
 
-const wrapper = shallowMount(FizzBuzz)
+const wrapper = mount(FizzBuzz)
 const dataObject = wrapper.vm.$data
 const inputField = wrapper.find('[data-test="input"]')
 const submitButton = wrapper.find('[data-test="submit"]')
