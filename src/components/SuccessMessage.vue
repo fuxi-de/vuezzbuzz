@@ -5,7 +5,7 @@
   >
     <div class="flex">
       <div>
-        <p class="font-bold">Fizzle da buzz:</p>
+        <p class="font-bold">The answer for that number is:</p>
         <p class="text-sm" data-test="success">
           {{ message }}
         </p>
