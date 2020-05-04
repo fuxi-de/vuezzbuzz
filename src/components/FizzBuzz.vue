@@ -13,21 +13,17 @@
           data-test="input"
           @keyup.enter="validate"
         />
-        <button
-          class="flex-shrink-0 bg-immowelt-500 hover:bg-immowelt-400 border-immowelt-500 hover:border-immowelt-400 text-sm border-4 text-white py-1 px-2 rounded"
-          type="button"
+        <Button
+          look="full"
+          label="Fizz the Buzz"
           data-test="submit"
-          @click="validate"
-        >
-          Fizz the Buzz
-        </button>
-        <button
-          class="flex-shrink-0 border-transparent border-4 text-immowelt-500 hover:text-gray-800 text-sm py-1 px-2 rounded"
-          type="button"
-          @click="reset($event)"
-        >
-          Cancel
-        </button>
+          @propagateButtonClick="validate"
+        />
+        <Button
+          look="inverted"
+          label="cancel"
+          @propagateButtonClick="reset"
+        />
       </div>
       <p
         v-if="error.length"
@@ -43,17 +39,18 @@
 
 <script>
 import SuccessMessage from './SuccessMessage'
+import Button from './Button'
 export default {
   name: 'FizzBuzz',
   components: {
-    SuccessMessage
+    SuccessMessage,
+    Button
   },
   data () {
     return {
       input: '',
       output: '',
-      error: '',
-      test: true
+      error: ''
     }
   },
   methods: {
