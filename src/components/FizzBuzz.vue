@@ -50,7 +50,7 @@ export default {
   },
   data () {
     return {
-      input: '',
+      input: null,
       output: '',
       error: ''
     }
@@ -74,15 +74,15 @@ export default {
       const i = this.input
       this.output =
         i % 3 === 0 && i % 5 === 0
-          ? 'fizzbuzz'
+          ? 'FizzBuzz'
           : i % 5 === 0
-            ? 'buzz'
+            ? 'Buzz'
             : i % 3 === 0
-              ? 'fizz'
+              ? 'Fizz'
               : i.toString()
     },
     reset () {
-      this.input = ''
+      this.input = null
       this.error = ''
       this.output = ''
     }
