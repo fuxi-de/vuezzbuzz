@@ -5,7 +5,7 @@
   >
     <div class="flex">
       <div>
-        <p class="font-bold">The answer for that number is:</p>
+        <p class="font-bold">The answer for the number {{ input }} is:</p>
         <p class="text-sm" data-test="success">
           {{ message }}
         </p>
@@ -18,7 +18,8 @@
 export default {
   name: 'SucessMessage',
   props: {
-    message: String
+    message: String,
+    input: Number
   }
 }
 </script>
