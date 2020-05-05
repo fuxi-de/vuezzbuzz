@@ -2,11 +2,12 @@
   <div class="fizzbuzz flex flex-col justify-center mx-auto w-9/12 h-screen">
     <form class="w-full max-w-sm self-center" @submit.prevent>
       <div
-        class="flex items-center border-b border-b-2 py-2"
-        :class="error.length ? 'border-red-500' : 'border-immowelt-yellow'"
+        class="flex flex-wrap md:flex-no-wrap items-center justify-center border-none md:border-solid md:border-b md:border-b-2 py-2"
+        :class="error.length ? 'border-red-500' : 'border-immowelt-500'"
       >
         <input
-          class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+          class="appearance-none bg-transparent border-b border-b-2 md:border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none mb-2 md:mb-0"
+          :class="error.length ? 'border-red-500' : 'border-immowelt-500'"
           type="number"
           placeholder="Gib eine Zahl ein"
           v-model.number="input"
@@ -27,7 +28,7 @@
       </div>
       <p
         v-if="error.length"
-        class="text-red-500 text-xs italic mt-4 text-left"
+        class="text-red-500 text-xs italic mt-4 text-center"
         data-test="error"
       >
         {{ error }}
