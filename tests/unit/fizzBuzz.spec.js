@@ -34,6 +34,6 @@ describe('FizzBuzz.vue', () => {
   })
   it('renders error message for negative input', () => {
     submitForm(0)
-    expect(dataObject.error).to.be.equal('Deine Eingabe muss eine Zahl sein die größer als 0 ist!')
+    expect(dataObject.error).to.be.equal('Deine Eingabe muss eine Zahl sein, die größer als 0 ist!')
   })
 })
