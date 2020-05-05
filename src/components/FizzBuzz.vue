@@ -3,11 +3,11 @@
     <form class="w-full max-w-sm self-center" @submit.prevent>
       <div
         class="flex flex-wrap md:flex-no-wrap items-center justify-center border-none md:border-solid md:border-b md:border-b-2 py-2"
-        :class="error.length ? 'border-red-500' : 'border-immowelt-500'"
+        :class="borderColor"
       >
         <input
           class="appearance-none bg-transparent border-b border-b-2 md:border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none mb-2 md:mb-0"
-          :class="error.length ? 'border-red-500' : 'border-immowelt-500'"
+          :class="borderColor"
           type="number"
           placeholder="Gib eine Zahl ein"
           v-model.number="input"
@@ -52,6 +52,11 @@ export default {
       input: '',
       output: '',
       error: ''
+    }
+  },
+  computed: {
+    borderColor () {
+      return this.error.length ? 'border-red-500' : 'border-immowelt-500'
     }
   },
   methods: {
