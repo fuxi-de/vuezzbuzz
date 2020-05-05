@@ -20,14 +20,14 @@ describe('FizzBuzz.vue', () => {
       expect(dataObject.output).to.be.equal(expected)
     })
   }
-  it('returns fizz for multiples of 3', () => {
-    fizzBuzzTest([3, 9, 18], 'fizz')
+  it('returns Fizz for multiples of 3', () => {
+    fizzBuzzTest([3, 9, 18], 'Fizz')
   })
-  it('returns buzz for multiples of 5', () => {
-    fizzBuzzTest([5, 10, 25], 'buzz')
+  it('returns Buzz for multiples of 5', () => {
+    fizzBuzzTest([5, 10, 25], 'Buzz')
   })
-  it('returns fizzbuzz for multiples of 3 and 5', () => {
-    fizzBuzzTest([15, 30, 60], 'fizzbuzz')
+  it('returns FizzBuzz for multiples of 3 and 5', () => {
+    fizzBuzzTest([15, 30, 60], 'FizzBuzz')
   })
   it('returns the input for numbers not matching the above', () => {
     fizzBuzzTest([1], '1')
