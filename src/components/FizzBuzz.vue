@@ -35,7 +35,7 @@
         {{ error }}
       </p>
     </form>
-    <success-message v-if="output.length" :message="output" />
+    <success-message v-if="output.length" :message="output" :input="input" />
   </div>
 </template>
 
