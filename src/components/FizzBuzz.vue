@@ -65,7 +65,7 @@ export default {
       this.error = ''
       this.output = ''
       if (this.input <= 0) {
-        this.error = 'Deine Eingabe muss eine Zahl sein die größer als 0 ist!'
+        this.error = 'Deine Eingabe muss eine Zahl sein, die größer als 0 ist!'
         return
       }
       this.fizzBuzz()
