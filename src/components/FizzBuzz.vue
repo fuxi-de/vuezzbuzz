@@ -6,7 +6,7 @@
         :class="borderColor"
       >
         <input
-          class="appearance-none bg-transparent border-b border-b-2 md:border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none mb-2 md:mb-0"
+          class="appearance-none bg-transparent border-b border-b-2 md:border-none rounded-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none mb-2 md:mb-0"
           :class="borderColor"
           type="number"
           placeholder="Gib eine Zahl ein"
