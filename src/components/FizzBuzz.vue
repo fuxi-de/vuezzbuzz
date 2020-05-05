@@ -13,6 +13,7 @@
           v-model.number="input"
           data-test="input"
           @keyup.enter="validate"
+          @keyup.delete="reset"
         />
         <Button
           look="full"
@@ -83,6 +84,7 @@ export default {
     reset () {
       this.input = ''
       this.error = ''
+      this.output = ''
     }
   }
 }
